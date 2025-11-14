@@ -14,7 +14,7 @@ def split(youtube_id:str):
     output_path=os.path.join(base_dir,youtube_id)
     os.makedirs(output_path,exist_ok=True)
     url=f"https://www.youtube.com/watch?v={youtube_id}"
-    #download_single_video(url,output_path)
+    download_single_video(url,output_path)
     ydl_opts = {'quiet': True, 'skip_download': True}
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=False)
