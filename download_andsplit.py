@@ -60,8 +60,6 @@ def split(youtube_id:str):
             #cv2.imwrite(f"frame{count}crop.jpg", cropped_image) # Save frame
             frame_list.append(image)
             count += 1
-            if count>8900:
-                print(count)
     print("count",count)
 '''    frame_list=frame_list[frame_start:frame_end]
     output_dict["label"].append(label)
